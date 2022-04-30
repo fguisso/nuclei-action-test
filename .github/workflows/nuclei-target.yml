@@ -1,0 +1,21 @@
+name: Nuclei - Target
+
+on:
+    workflow_dispatch:
+
+jobs:
+  nuclei-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Nuclei - DAST Scan
+        uses: fguisso/nuclei-action@npm
+        with:
+          target: guisso.dev
+
+      - name: GitHub Workflow artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: nuclei.log
+          path: nuclei.log
