@@ -15,3 +15,4 @@ jobs:
           target: guisso.dev
           github-report: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          flags: -debug
