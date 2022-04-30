@@ -16,3 +16,4 @@ jobs:
           github-report: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           flags: -debug
+          templates: tmplts
