@@ -1,0 +1,12 @@
+name: Nuclei - No Target/ No URLs
+on:
+    workflow_dispatch:
+
+jobs:
+  nuclei-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Nuclei - DAST Scan
+        uses: fguisso/nuclei-action@npm
