@@ -12,4 +12,5 @@ jobs:
       - name: Nuclei - DAST Scan
         uses: fguisso/nuclei-action@npm
         with:
+          target: guisso.dev
           templates: test-template.yml
