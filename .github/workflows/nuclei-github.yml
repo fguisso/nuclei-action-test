@@ -15,7 +15,7 @@ jobs:
           target: guisso.dev
           github-report: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          
+  
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
         with:
