@@ -1,4 +1,4 @@
-name: Nuclei - Target
+name: Nuclei - Workflows
 
 on:
     workflow_dispatch:
