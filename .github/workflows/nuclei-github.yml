@@ -20,4 +20,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: nuclei-report
-          path: github-report.yml
+          path: github-report.yaml
