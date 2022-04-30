@@ -13,4 +13,4 @@ jobs:
         uses: fguisso/nuclei-action@npm
         with:
           target: guisso.dev
-          templates: tmplts
+          templates: tmplts/
