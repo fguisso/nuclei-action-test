@@ -3,6 +3,9 @@ name: Nuclei - Github Report
 on:
     workflow_dispatch:
 
+permissions:
+    issues: read|write
+    
 jobs:
   nuclei-scan:
     runs-on: ubuntu-latest
