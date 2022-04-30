@@ -1,0 +1,22 @@
+name: Nuclei - Markdown Export
+
+on:
+    workflow_dispatch:
+
+jobs:
+  nuclei-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Nuclei - DAST Scan
+        uses: fguisso/nuclei-action@npm
+        with:
+          target: guisso.dev
+          markdown-export: md
+
+      - name: GitHub Workflow artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: markdown-export
+          path: md
