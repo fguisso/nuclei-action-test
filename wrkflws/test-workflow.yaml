@@ -1,0 +1,10 @@
+id: test-workflow
+
+info:
+  name: test workflows
+  author: fguisso
+  description: Lorem ipsum security.
+
+workflows:
+  - template: tmplts/test-template.yaml
+  - template: tmplts/test-template-2.yaml
