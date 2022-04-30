@@ -1,0 +1,17 @@
+name: Nuclei - Github Report
+
+on:
+    workflow_dispatch:
+
+jobs:
+  nuclei-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Nuclei - DAST Scan
+        uses: fguisso/nuclei-action@npm
+        with:
+          target: guisso.dev
+          github-report: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
