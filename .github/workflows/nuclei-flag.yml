@@ -13,7 +13,7 @@ jobs:
         uses: fguisso/nuclei-action@npm
         with:
           target: guisso.dev
-          flags: -rate-limit 10
+          flags: -rate-limit=10
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
