@@ -10,10 +10,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Nuclei - DAST Scan
-        uses: fguisso/nuclei-action@flafs-fix
+        uses: fguisso/nuclei-action@fix-flags
         with:
           target: guisso.dev
-          flags: -rate-limit=10 -debug -timeout=2 -exclude-id http-missing-security-headers
+          flags: -exclude-id http-missing-security-headers
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
