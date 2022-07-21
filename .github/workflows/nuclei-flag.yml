@@ -13,7 +13,7 @@ jobs:
         uses: fguisso/nuclei-action@fix-flags
         with:
           target: guisso.dev
-          flags: -exclude-id http-missing-security-headers
+          flags: "-exclude-id http-missing-security-headers -debug"
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
