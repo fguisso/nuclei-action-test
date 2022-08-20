@@ -1,0 +1,22 @@
+name: HTTPx - GHA Toolkit
+
+on:
+    workflow_dispatch:
+
+jobs:
+  httpx-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: HTTPx
+        uses: fguisso/httpx-action@gha-toolkit
+        with:
+          list: urls.txt
+          flags: "-x all -rl 200 -pa -debug"
+
+      - name: GitHub Workflow artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: httpx.log
+          path: httpx.log
