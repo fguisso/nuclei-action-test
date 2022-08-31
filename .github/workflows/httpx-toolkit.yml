@@ -14,7 +14,7 @@ jobs:
         with:
           list: urls.txt
           version: 1.2.4
-          flags: -v -debug -stats
+          flags: -r 1.1.1.1 -r 8.8.8.8 -v -debug -stats
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
