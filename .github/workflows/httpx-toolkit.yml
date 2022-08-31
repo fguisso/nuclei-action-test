@@ -13,8 +13,7 @@ jobs:
         uses: fguisso/httpx-action@gha-toolkit
         with:
           list: urls.txt
-          version: 1.2.3
-          flags: -v
+          flags: -v -hc -stats
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
