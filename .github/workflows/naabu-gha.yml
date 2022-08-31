@@ -1,0 +1,15 @@
+name: naabu - GHA Toolkit
+
+on:
+    workflow_dispatch:
+
+jobs:
+  naabu-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Naabu
+        uses: fguisso/naabu-action@gha-toolkit
+        with:
+          list: urls.txt
