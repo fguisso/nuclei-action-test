@@ -1,4 +1,3 @@
-runs-on: pd-actions
 name: HTTPx - GHA Toolkit
 
 on:
